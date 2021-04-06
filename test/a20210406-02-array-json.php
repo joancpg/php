@@ -25,11 +25,15 @@ $persons = [
         'gender' => 'female',
     ],
 
+
 ];
 
 
 // header('Content-Type: application/json');
-echo json_encode($persons, JSON_UNESCAPED_UNICODE);
+echo json_encode([
+    'get'=> $_GET,
+    'person'=>$persons
+    ], JSON_UNESCAPED_UNICODE);
 //SON_UNESCAPED_UNICODE  若沒有打這個~又沒有裝外掛~讀不到中文~
 //要去下載jsonsonviews
 
